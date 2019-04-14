@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import img from '../img/lanky.png';
 
+// This is the 404 page if a route is not found
+
 function NotFound () {
   return (
     <div>

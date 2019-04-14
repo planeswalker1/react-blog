@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import NotFound from '../NotFound';
+
+// This displays the blog post information
+
+// if there is a blog post
+// display the blog information
+// else
+// display the NotFound component
 
 class BlogDetails extends Component {
   render() {
@@ -9,7 +17,7 @@ class BlogDetails extends Component {
         <p>{this.props.blog.content}</p>
       </div>
     ) : (
-      <div>Blog Not Found</div>
+      <NotFound />
     );
 
     return (
@@ -20,6 +28,7 @@ class BlogDetails extends Component {
   }
 };
 
+// connect to redux store and get the requested blog using the router paramater 'id' to find a blog with that id
 const mapStateToProps = (state, ownProps) => {
   const blogId = ownProps.match.params.id;
   console.log(state.blog.blogs.find(blog => blog.id === blogId))

@@ -1,6 +1,8 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+// this is the navigation links
+
 function Links () {
   return (
     <div>
